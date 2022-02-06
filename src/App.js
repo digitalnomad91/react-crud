@@ -6,6 +6,8 @@ import RoomType from './components/roomtypes/View';
 import Reservations from './components/reservations/Index';
 import Reservation from './components/reservations/View';
 import ReservationForm from './components/reservations/Form';
+import RoomTypeForm from './components/roomtypes/Form';
+
 import NavigationBar from './components/NavigationBar';
 import 'react-bootstrap/dist/react-bootstrap.min.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -53,6 +55,14 @@ function App() {
               <Route
                 path="room-type/:roomTypeId"
                 element={<RoomType />}
+              />
+              <Route
+                path="room-type/create"
+                element={<RoomTypeForm />}
+              />
+              <Route
+                path="room-type/edit/:roomTypeId"
+                element={<RoomTypeForm />}
               />
               <Route
                 path="reservation/:reservationId"

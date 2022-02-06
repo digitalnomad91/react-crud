@@ -26,6 +26,7 @@ function RoomTypes() {
 
     return <div>
         <h1>Room Types</h1>
+        <Link  className="btn btn-primary" to={'/room-type/create'}>Create</Link>
 
         <Table striped bordered hover>
         <thead>
@@ -51,7 +52,7 @@ function RoomTypes() {
                     <td>{item.description}</td>
                     <td>{item.rate}</td>
                     <td>{item.active ? 'true' : 'false'}</td>
-                    <td><a href="#">Edit</a></td>
+                    <td><Link className="nav-link" to={'/room-type/edit/'+item.id}>Edit</Link></td>
                 </tr>
                 )
             }
